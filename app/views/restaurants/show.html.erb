@@ -1,0 +1,19 @@
+<h1>Welcome to <%= @restaurant.name %></h1>
+<ul>
+  <li><%= @restaurant.name %></li>
+ <li><%= @restaurant.address %></li>
+ <li><%= @restaurant.phone_number %></li>
+ <li><%= @restaurant.category %></li>
+ </ul>
+
+
+ <h3>Here are the reviews about <%= @restaurant.name %></h3>
+  <% @restaurant.reviews.each do |review| %>
+  <ul>
+  <li><%= review.content %></li>
+  <li>Rating: <%= review.rating %></li>
+  </ul>
+
+  <% end %>
+
+<button class='btn btn-success' id="button"><%= link_to "go back", restaurants_path %></button>
