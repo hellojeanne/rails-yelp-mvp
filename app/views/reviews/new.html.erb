@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%=simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection: Review::RATINGS, :prompt => 'Select a rating' %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

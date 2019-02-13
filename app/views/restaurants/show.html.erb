@@ -13,7 +13,10 @@
   <li><%= review.content %></li>
   <li>Rating: <%= review.rating %></li>
   </ul>
-
   <% end %>
+  <button class='btn btn-success button'>
+    <%= link_to "add a review", new_restaurant_review_path(@restaurant) %>
+  </button>
 
-<button class='btn btn-success' id="button"><%= link_to "go back", restaurants_path %></button>
+
+<button class='btn btn-success button'><%= link_to "go back", restaurants_path %></button>
